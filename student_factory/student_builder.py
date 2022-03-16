@@ -1,7 +1,7 @@
 "The Builder Class"
 
-from student_factory.student import Student
-from student_factory.student_interface import IStudentBuilder
+from .student import Student
+from .student_interface import IStudentBuilder
 
 
 class StudentBuilder(IStudentBuilder):
@@ -11,7 +11,9 @@ class StudentBuilder(IStudentBuilder):
         self.student = Student(name)
 
     def calculate_cgpa(self) -> int:
+        "calculate student cgpa"
         return self.student.calculate_cgpa()
-    
+
     def get_result(self):
+        "Get student result"
         return self.student
